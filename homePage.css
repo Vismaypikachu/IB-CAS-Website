@@ -2,10 +2,11 @@
     background-color: aqua;
     color: black;
     text-align: center;
-    padding-bottom: 0%;
+    padding: 0%;
 }
 
 #navBar{
+    padding: 0;
     background-color: #A494F2;
     color: black;
     text-align: center;
