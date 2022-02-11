@@ -8,5 +8,6 @@
 #navBar{
     background-color: blue;
     color: black;
+    opacity: 50;
     text-align: center;
 }
