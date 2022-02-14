@@ -6,21 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homePage.css">
-    <title>Website</title>
+    <title>IB CAS Project</title>
     
 </head>
-<body>
-    <div id="titleBar"> <!-- Title Bar-->
-        <h1> Hello </h1>
-    </div>
 
-    <div> <!-- Nav Bar-->
-        <p>
-            <a href = "https://techsavvyyouth.org">Test Link</a>
-            <a href = "https://youtube.com">YouTube Link</a>
-            <a href = "https://techsavvyyouth.org">Test Link</a>            
-        </p>
-    </div>
-
+<body id = "container">
+	<!-- HEADER CONTENT -->
+	<header id = "header">
+		<div id="titleBar"> <!-- Title Bar-->
+			<h1>IB CAS Project</h1>
+		</div>
+		
+		<div id="navBar"> <!-- Nav Bar-->
+			<p>
+				<a href = "requestPage.php">Request Page</a>
+				<a href = "https://youtube.com/vismaypikachu">YouTube Link</a>
+				<a href = "adminPage.html">Test Link</a>            
+			</p>
+		</div>
+	</header>
+	
+	<!-- BODY CONTENT -->
+	<div id = "content">
+		<div id="ghost"> </div>
+		
+		<div id = "about us"> 
+			<h2 style = "margin: 6px">About Us</h2>
+			<br>
+		</div>
+		
+		<div id = "intro"> 
+			<p>Welcome to the INSERT NAME webpage. Here we do ...</p>
+		</div>
+		
+		<div id = "our team"> 
+			<h2 style = "margin: 6px">Our Team</h2>
+			<br>
+		</div>
+		
+	</div>
+	
 </body>
+
+<script>
+	window.onscroll = function() {myFunction()};
+
+	// Get the header
+	var header = document.getElementById("header");
+
+	// Get the offset position of the navbar
+	var sticky = header.offsetTop;
+
+	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function myFunction() {
+	  if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+	  } else {
+		$(".ghost").addClass("hidden");
+	  }
+	}
+</script>
 </html>
