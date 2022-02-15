@@ -46,13 +46,16 @@
 	}
 			
 	if(isset($_POST['requiredCheck'])){
-		/*$sql = "SELECT id, name, quantity FROM inventory";
+		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
-			$i = 0;
-			$arr[] = $_POST['check'.$i];
-			$i++;
-		}*/
+			$i = 1;
+			while($i < $result->num_rows){
+				echo $_POST['item'.$i];
+				#$sql2 = "UPDATE inventory SET quantity = " .$_POST['item'.$i]. " WHERE name = '" .row["id"]."';";
+				#$result2 = $conn->query($sql);
+			}
+		}
 	}
 	else {
 		$sql = "SELECT id, name, quantity FROM inventory";
@@ -67,8 +70,6 @@
 					<td> <input type=\"text\" id=\"quantity\".$i name=\"quantity\".$i> </td>
 				</tr>";
 					
-				#<td> <label for="item1">Bananas</label> </td>
-				#<td> <input type="text" id="item1"> </td>
 				$i++;
 			}
 			echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
