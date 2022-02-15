@@ -47,7 +47,7 @@
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
 			
-	if(!empty($requiredCheckmark)){
+	if(isset($requiredCheckmark)){
 
 	}
 	else{
