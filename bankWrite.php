@@ -23,7 +23,7 @@
 	#variables
 	$bank = $_POST['banks'];
 	$requiredCheck = $_POST['requiredCheck'];
-	echo isset($requiredCheck);
+	$i = $_POST[];
 	#for(int i = 0; i < 10; i++){
 		
 	#}
@@ -46,10 +46,10 @@
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
 			
-	#if(isset($requiredCheckmark)){
+	if(isset($requiredCheckmark)){
 
-	#}
-	#else{
+	}
+	else{
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
@@ -66,15 +66,15 @@
 				#<td> <input type="text" id="item1"> </td>
 				$i++;
 			}
-				echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
-				<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
-				<label for=\"requiredCheck\">I have reviewed my changes</label>
-				<input type=\"submit\" value=\"Submit\"></form>";
+			echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
+			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
+			<label for=\"requiredCheck\">I have reviewed my changes</label>
+			<input type=\"submit\" value=\"Submit\"></form>";
 		}
 		else{
 			echo "0 results availible at this time";
 		}
-	#}
+	}
 	$conn->close();
 ?>
 </html>
