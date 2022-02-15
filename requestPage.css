@@ -7,6 +7,10 @@
     text-align: left;
 }
 
+th{
+    background-color: red;
+}
+
 tr{
     background-color: #588c7e;
     color: red;
