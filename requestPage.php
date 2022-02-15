@@ -12,6 +12,7 @@
 	<form id = "bankSelector" method="POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
+			<option>Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
