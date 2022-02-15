@@ -3,6 +3,7 @@
 
 	<table id="table">
         <tr>
+			<th>Check</th>
         	<th>ID</th>
             <th>Name</th>
         	<th>Quantity</th>
@@ -20,7 +21,7 @@
 
 	$db_name = $bank;
 	
-	echo $db_name;
+	
 	$host = "ibcasserver.mysql.database.azure.com";
     $username = "ibcasvismay@ibcasserver";
     $password = "jointechsavvyyouth1!";
@@ -40,7 +41,7 @@
 		$i = 0;
 		while ($row = $result->fetch_assoc()) {
 			echo "<tr>
-					
+					<td> <input type="checkbox" id="item".$i name="item".$i> </td>
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
