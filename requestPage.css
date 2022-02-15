@@ -1,7 +1,7 @@
 #table{
     border-collapse: collapse;
     width: 100%;
-    color: #588c7e;
+    color: red;
     font-family: monospace;
     font-size: 25px;
     text-align: left;
@@ -9,7 +9,7 @@
 
 tr{
     background-color: #588c7e;
-    color: white;
+    color: red;
 }
 
 tr:nth-child(even){
