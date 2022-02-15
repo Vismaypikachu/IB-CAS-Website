@@ -12,7 +12,6 @@
 
 	<table id="table">
         <tr>
-			<th>Check</th>
         	<th>ID</th>
             <th>Name</th>
         	<th>Quantity</th>
@@ -57,7 +56,6 @@
 			$i = 1;
 			while ($row = $result->fetch_assoc()) {
 				echo "<tr>
-					<td> <input type=\"checkbox\" id=\"check\".$i name=\"check\".$i> </td>
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
