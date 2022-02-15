@@ -61,7 +61,7 @@
 			#<td> <label for="item1">Bananas</label> </td>
 			#<td> <input type="text" id="item1"> </td>
 		}
-		echo "</table>";
+		echo "</table> <form><input type=\"submit\" value=\"Submit\"></form>";
     }
     else{
     	echo "0 results availible at this time";
