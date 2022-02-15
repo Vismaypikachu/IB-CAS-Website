@@ -22,7 +22,7 @@
 <?php
 	#variables
 	$bank = $_POST['banks'];
-	$i = $_POST[];
+	#$i = $_POST[];
 	#for(int i = 0; i < 10; i++){
 		
 	#}
