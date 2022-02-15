@@ -1,6 +1,6 @@
 <?php
 
-	$bank = $_POST['banks'];
+	$bank = $_POST['banks'].val();
 	if(empty($bank)){
 		$bank = "northwestHarvest";
 		$db_name = "northwestHarvest";
