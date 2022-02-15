@@ -12,7 +12,7 @@
 	<form id = "bankSelector" action = "connect.php" method = "POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
-			<option>Select One</option>
+			<option value="empty">Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
