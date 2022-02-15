@@ -24,7 +24,7 @@
 	#variables
 	$bank = $_POST['banks'];
 	$requiredCheck = $_POST['requiredCheck'];
-	echo $requiredCheck;
+	#echo $requiredCheck;
 	#for(int i = 0; i < 10; i++){
 		
 	#}
