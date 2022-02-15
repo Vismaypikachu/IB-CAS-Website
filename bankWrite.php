@@ -7,7 +7,7 @@
 			<option>Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Select Bank">
 	</form>
 
 	<table id="table">
