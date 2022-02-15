@@ -8,7 +8,7 @@
         	<th>Quantity</th>
         </tr>
 	
-</html>
+
 <?php
 
 	$bank = $_POST['banks'];
@@ -49,3 +49,4 @@
 
     $conn->close();
 ?>
+</html>
