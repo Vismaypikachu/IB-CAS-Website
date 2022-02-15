@@ -8,6 +8,6 @@
         mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
 
         if (mysqli_connect_errno()) {
-                die("Failed to connect to MYSQL: ".mysqli_connect_error());
+        	die("Failed to connect to MYSQL: ".mysqli_connect_error());
         }
 ?>

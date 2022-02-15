@@ -9,9 +9,9 @@
 </head>
 <body>
 
-	<form id = "bankSelector">
+	<form id = "bankSelector" Method="POST">
 		<label for="banks">Choose a Donation Center:</label>
-		<select id="banks" name="banks">
+		<select id="banks" name="banks" required>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
@@ -24,9 +24,8 @@
         	<th>Quantity</th>
         </tr>
     	<?php
-			if ($('#bankSelector').val() == "northwestHarvest") {
-				require "db.php";
-			}
+			require "db.php";
+			
            
             $sql = "SELECT id, name, quantity FROM inventory";
             $result = $conn->query($sql);
