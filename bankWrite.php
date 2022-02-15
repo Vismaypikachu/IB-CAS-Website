@@ -1,5 +1,5 @@
 <html>
-	<link rel="stylesheet" href="requestPage.css">
+	<link rel="stylesheet" href="bankWrite.css">
 
 	<table id="table">
         <tr>
@@ -39,7 +39,12 @@
 	if($result->num_rows > 0){
 		$i = 0;
 		while ($row = $result->fetch_assoc()) {
-			echo "<tr><td> <input type="checkbox" id="item".i name="item".i> </td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
+			echo "<tr>
+					<td> <input type="checkbox" id="item".i name="item".i> </td>
+					<td>". $row["id"] ."</td>
+					<td>". $row["name"] ."</td>
+					<td>". $row["quantity"] . "</td>
+				</tr>";
 			
 			#<td> <label for="item1">Bananas</label> </td>
 			#<td> <input type="text" id="item1"> </td>
