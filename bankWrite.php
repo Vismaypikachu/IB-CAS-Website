@@ -68,8 +68,8 @@
 			}
 				echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
 				<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
-				<label for=\"requiredCheck\">I have reviewed my changes</label> </form>
-				<input type=\"submit\" value=\"Submit\">";
+				<label for=\"requiredCheck\">I have reviewed my changes</label>
+				<input type=\"submit\" value=\"Submit\"></form>";
 			}
 			else{
 				echo "0 results availible at this time";
