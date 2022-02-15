@@ -41,7 +41,7 @@
 		$i = 0;
 		while ($row = $result->fetch_assoc()) {
 			echo "<tr>
-					<td> <input type="checkbox" id="item".$i name="item".$i> </td>
+					<td> <input type=\"checkbox\" id=\"item\".$i name=\"item\".$i> </td>
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
