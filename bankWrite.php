@@ -70,10 +70,9 @@
 				<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 				<label for=\"requiredCheck\">I have reviewed my changes</label>
 				<input type=\"submit\" value=\"Submit\"></form>";
-			}
-			else{
-				echo "0 results availible at this time";
-			}
+		}
+		else{
+			echo "0 results availible at this time";
 		}
 	#}
 	$conn->close();
