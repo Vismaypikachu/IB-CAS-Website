@@ -1,5 +1,5 @@
 <html>
-	<link rel="stylesheet" href="bankWrite.css">
+	<link rel="stylesheet" href="adminPage.css">
 
 	<table id="table">
         <tr>
@@ -20,7 +20,7 @@
 
 	$db_name = $bank;
 	
-	
+	echo $db_name;
 	$host = "ibcasserver.mysql.database.azure.com";
     $username = "ibcasvismay@ibcasserver";
     $password = "jointechsavvyyouth1!";
