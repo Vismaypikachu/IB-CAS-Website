@@ -46,6 +46,7 @@
 	}
 			
 	if(isset($_POST['requiredCheck'])){
+		echo "</table>";
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		$num_rows = $result->num_rows;
