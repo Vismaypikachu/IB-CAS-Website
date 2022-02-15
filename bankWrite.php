@@ -64,7 +64,8 @@
 	else {
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
-		if($result->num_rows > 0){
+		$num_rows = $result->num_rows;
+		if($num_rows > 0){
 			$i = 1;
 			while ($row = $result->fetch_assoc()) {
 				echo "<tr>
