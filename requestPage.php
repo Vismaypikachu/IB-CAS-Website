@@ -24,7 +24,7 @@
         	<th>Quantity</th>
         </tr>
     	<?php
-			if ($('#searchbar').val() == "northwestHarvest") {
+			if ($('#bankSelector').val() == "northwestHarvest") {
 				require "db.php";
 			}
            
