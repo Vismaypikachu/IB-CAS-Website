@@ -5,4 +5,21 @@
 		$bank = "northwestHarvest";
 		$db_name = "northwestHarvest";
 	}
+
+	
+	require "db.php";
+			
+           
+    $sql = "SELECT id, name, quantity FROM inventory";
+	$result = $conn->query($sql);
+	if($result->num_rows > 0){
+		while ($row = $result->fetch_assoc()) {
+			echo "<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
+		}
+    }
+    else{
+    	echo "0 results availible at this time";
+    }
+
+    $conn->close();
 ?>

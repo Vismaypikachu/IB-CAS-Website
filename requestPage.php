@@ -12,7 +12,6 @@
 	<form id = "bankSelector" Method="POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
-			<option>Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
@@ -24,23 +23,6 @@
             <th>Name</th>
         	<th>Quantity</th>
         </tr>
-    	<?php
-			require "db.php";
-			
-           
-            $sql = "SELECT id, name, quantity FROM inventory";
-            $result = $conn->query($sql);
-            if($result->num_rows > 0){
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
-            }
-            }
-            else{
-                echo "0 results availible at this time";
-            }
-
-            $conn->close();
-    	?>
 	</table>
 </body>
 </html>
