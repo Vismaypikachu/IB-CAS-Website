@@ -51,6 +51,7 @@
 		$result = $conn->query($sql);
 		$num_rows = $result->num_rows;
 		echo $num_rows;
+		echo $_POST['item1'];
 		#if($num_rows > 0){
 			#$i = 1;
 			#while($i < $num_rows){
@@ -60,7 +61,7 @@
 			#}
 		#}
 		#else{
-			echo "0 results availible at this time";
+			echo "\n0 results availible at this time";
 		#}
 		
 	}
