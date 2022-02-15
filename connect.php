@@ -8,7 +8,7 @@
 	}
 
 	$db_name = $bank;
-
+	echo $bank;
 	$host = "ibcasserver.mysql.database.azure.com";
     $username = "ibcasvismay@ibcasserver";
     $password = "jointechsavvyyouth1!";
