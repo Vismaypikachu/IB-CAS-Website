@@ -7,6 +7,7 @@
         	<th>ID</th>
             <th>Name</th>
         	<th>Quantity</th>
+			<th>Change Quantity</th>
         </tr>
 	
 
@@ -41,10 +42,11 @@
 		$i = 0;
 		while ($row = $result->fetch_assoc()) {
 			echo "<tr>
-					<td> <input type=\"checkbox\" id=\"item\".$i name=\"item\".$i> </td>
+					<td> <input type=\"checkbox\" id=\"check\".$i name=\"check\".$i> </td>
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
+					<td> <input type=\"text\" id=\"quantity\".$i name=\"quantity\".$i> </td>
 				</tr>";
 			
 			#<td> <label for="item1">Bananas</label> </td>
