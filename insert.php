@@ -6,9 +6,9 @@
 		$db_name = "northwestHarvest";
 	}
 
-	
+	$db_name = $bank;
 	require "db.php";
-			
+		
            
     $sql = "SELECT id, name, quantity FROM inventory";
 	$result = $conn->query($sql);
