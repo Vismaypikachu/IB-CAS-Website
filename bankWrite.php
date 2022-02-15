@@ -62,9 +62,9 @@
 			#<td> <input type="text" id="item1"> </td>
 			$i++;
 		}
-		echo "</table> 
+		echo "</table> <form> 
 		<input type=\"checkbox\" id=\"check\".$i name=\"check\".$i required> 
-		<label for=\"check.$i\">I have reviewed my changes: </label>";
+		<label for=\"check.$i\">I have reviewed my changes: </label> </form>";
     }
     else{
     	echo "0 results availible at this time";
