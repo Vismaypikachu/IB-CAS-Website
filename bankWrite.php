@@ -25,9 +25,9 @@
 	$bank = $_POST['banks'];
 	$requiredCheck = $_POST['requiredCheck'];
 	echo $requiredCheck;
-	for(int i = 0; i < 10; i++){
+	#for(int i = 0; i < 10; i++){
 		
-	}
+	#}
 		
 	if(empty($bank)){
 		$bank = "northwestHarvest";
