@@ -23,7 +23,7 @@
 <?php
 	#variables
 	$bank = $_POST['banks'];
-	$requiredCheck = $_POST['requiredCheck'];
+	#$requiredCheck = $_POST['requiredCheck'];
 	#echo $requiredCheck;
 	#for(int i = 0; i < 10; i++){
 		
@@ -47,10 +47,10 @@
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
 			
-	if(isset($requiredCheckmark)){
+	#if(isset($requiredCheckmark)){
 
-	}
-	else{
+	#}
+	#else{
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		if($result->num_rows > 0){
@@ -77,7 +77,7 @@
 				echo "0 results availible at this time";
 			}
 		}
-	}
+	#}
 	$conn->close();
 ?>
 </html>
