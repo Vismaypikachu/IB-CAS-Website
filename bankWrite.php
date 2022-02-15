@@ -62,9 +62,10 @@
 			#<td> <input type="text" id="item1"> </td>
 			$i++;
 		}
-		echo "</table> <form> 
+		echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
 		<input type=\"checkbox\" id=\"check\".$i name=\"check\".$i required> 
-		<label for=\"check.$i\">I have reviewed my changes: </label> </form>";
+		<label for=\"check.$i\">I have reviewed my changes</label> </form>
+		<input type=\"submit\" value=\"Submit\">";
     }
     else{
     	echo "0 results availible at this time";
