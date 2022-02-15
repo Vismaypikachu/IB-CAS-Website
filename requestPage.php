@@ -12,7 +12,7 @@
 	<form id = "bankSelector">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks">
-			<option value="Northwest Harvest">Northwest Harvest</option>
+			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
 	</form>
@@ -24,7 +24,10 @@
         	<th>Quantity</th>
         </tr>
     	<?php
-            require "db.php";
+			if ($('#searchbar').val() == "northwestHarvest") {
+				require "db.php";
+			}
+           
             $sql = "SELECT id, name, quantity FROM inventory";
             $result = $conn->query($sql);
             if($result->num_rows > 0){
