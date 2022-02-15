@@ -18,12 +18,5 @@
 		<input type="submit" value="Submit">
 	</form>
 
-    <table id="table">
-        <tr>
-        	<th>ID</th>
-            <th>Name</th>
-        	<th>Quantity</th>
-        </tr>
-	</table>
 </body>
 </html>
