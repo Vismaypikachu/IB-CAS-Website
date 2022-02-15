@@ -24,9 +24,9 @@
 			<th>Quantity</th>
 		</tr>
 		<?php
-			#$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "ibcasserver.mysql.database.azure.com", "ibcasvismay@ibcasserver", "jointechsavvyyouth1!", "northwestHarvest", 3306);
+			$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "ibcasserver.mysql.database.azure.com", "ibcasvismay@ibcasserver", "jointechsavvyyouth1!", "northwestHarvest", 3306);
 			#$('#searchbar').val()
-			$conn = mysqli_connect("ibcasserver.mysql.database.azure.com", "ibcasvismay@ibcasserver", "jointechsavvyyouth1!", "northwestHarvest");
+			#$conn = mysqli_connect("ibcasserver.mysql.database.azure.com", "ibcasvismay@ibcasserver", "jointechsavvyyouth1!", "northwestHarvest");
 			
 			if($conn->connect_error){
 				die("Connection Failed: " . $conn->connnect_error);
