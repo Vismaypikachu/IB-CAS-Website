@@ -63,8 +63,8 @@
 			$i++;
 		}
 		echo "</table> 
-		<input type=\"checkbox\" id=\"check\".$i name=\"check\".$i> 
-		<label for=\"check.$i\">Choose a Donation Center: </label>";
+		<input type=\"checkbox\" id=\"check\".$i name=\"check\".$i required> 
+		<label for=\"check.$i\">I have reviewed my changes: </label>";
     }
     else{
     	echo "0 results availible at this time";
