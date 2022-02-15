@@ -15,7 +15,7 @@
 			<option>Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
-		<input type="submit" value="Select Bank">
+		<input type="submit" value="Submit">
 	</form>
 
 </body>

@@ -7,7 +7,7 @@
 			<option>Select One</option>
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
-		<input type="submit" value="Select Bank">
+		<input type="submit" value="Submit">
 	</form>
 
 	<table id="table">
@@ -48,7 +48,7 @@
     $sql = "SELECT id, name, quantity FROM inventory";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0){
-		$i = 0;
+		$i = 1;
 		while ($row = $result->fetch_assoc()) {
 			echo "<tr>
 					<td> <input type=\"checkbox\" id=\"check\".$i name=\"check\".$i> </td>
@@ -60,8 +60,11 @@
 			
 			#<td> <label for="item1">Bananas</label> </td>
 			#<td> <input type="text" id="item1"> </td>
+			$i++;
 		}
-		echo "</table> <form><input type=\"submit\" value=\"Submit\"></form>";
+		echo "</table> 
+		<input type=\"checkbox\" id=\"check\".$i name=\"check\".$i> 
+		<label for=\"check.$i\">Choose a Donation Center: </label>";
     }
     else{
     	echo "0 results availible at this time";
