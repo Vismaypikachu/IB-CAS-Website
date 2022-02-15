@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<form id = "bankSelector" Method="POST">
+	<form id = "bankSelector" method="POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
 			<option value="northwestHarvest">Northwest Harvest</option>
