@@ -37,9 +37,12 @@
     $sql = "SELECT id, name, quantity FROM inventory";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0){
-		
+		$i = 0;
 		while ($row = $result->fetch_assoc()) {
-			echo "<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
+			echo "<tr><td> <input type="checkbox" id="item".i name="item".i> </td><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
+			
+			#<td> <label for="item1">Bananas</label> </td>
+			#<td> <input type="text" id="item1"> </td>
 		}
 		echo "</table>";
     }
