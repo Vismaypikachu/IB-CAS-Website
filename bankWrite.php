@@ -46,7 +46,13 @@
 	}
 			
 	if(isset($_POST['requiredCheck'])){
-		continue;
+		/*$sql = "SELECT id, name, quantity FROM inventory";
+		$result = $conn->query($sql);
+		if($result->num_rows > 0){
+			$i = 0;
+			$arr[] = $_POST['check'.$i];
+			$i++;
+		}*/
 	}
 	else {
 		$sql = "SELECT id, name, quantity FROM inventory";
