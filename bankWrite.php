@@ -51,7 +51,7 @@
 		$result = $conn->query($sql);
 		$num_rows = $result->num_rows;
 		echo $num_rows;
-		echo $_POST['item1'];
+		echo $_POST['quantity1'];
 		#if($num_rows > 0){
 			#$i = 1;
 			#while($i < $num_rows){
