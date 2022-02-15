@@ -7,7 +7,18 @@
 	}
 
 	$db_name = $bank;
-	require "db.php";
+
+	$host = "ibcasserver.mysql.database.azure.com";
+    $username = "ibcasvismay@ibcasserver";
+    $password = "jointechsavvyyouth1!";
+
+
+    $conn = mysqli_init();
+    mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+
+    if (mysqli_connect_errno()) {
+      	die("Failed to connect to MYSQL: ".mysqli_connect_error());
+    }
 		
            
     $sql = "SELECT id, name, quantity FROM inventory";
