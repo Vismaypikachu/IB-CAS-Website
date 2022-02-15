@@ -1,3 +1,6 @@
+<html>
+	<link rel="stylesheet" href="requestPage.css">
+</html>
 <?php
 
 	$bank = $_POST['banks'];
