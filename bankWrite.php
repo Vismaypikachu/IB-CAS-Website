@@ -50,7 +50,7 @@
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		$num_rows = $result->num_rows;
-		echo $_POST['quantity1'];
+		echo $_POST['quantity'];
 		if($num_rows > 0){
 			#$i = 1;
 			#while($i < $num_rows){
