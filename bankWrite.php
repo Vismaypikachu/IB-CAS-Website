@@ -75,7 +75,7 @@
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
-					<td> <input type=\"text\" id=\"quantity".$i"\" name=\"quantity".$i"\"> </td>
+					<td> <input type=\"text\" id=\"quantity" .$i ."\" name=\"quantity." .$i ."\"> </td>
 				</tr>";
 					
 				$i++;
