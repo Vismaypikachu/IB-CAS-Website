@@ -50,7 +50,7 @@
 		$sql = "SELECT id, name, quantity FROM inventory";
 		$result = $conn->query($sql);
 		$num_rows = $result->num_rows;
-		echo $_POST['quantity1'].val();
+		echo $_POST['quantity1'];
 		if($num_rows > 0){
 			#$i = 1;
 			#while($i < $num_rows){
@@ -75,7 +75,7 @@
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
-					<td> <input type=\"text\" id=\"quantity.$i\" name=\"quantity.$i\"> </td>
+					<td> <input type=\"text\" id=\"quantity".$i"\" name=\"quantity".$i"\"> </td>
 				</tr>";
 					
 				$i++;
