@@ -68,7 +68,7 @@
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
-			echo ""
+			echo "<form action = \"bankWrite.php\" method = \"POST\">"
 			while ($row = $result->fetch_assoc()) {
 				echo "<tr>
 					<td>". $row["id"] ."</td>
@@ -79,7 +79,7 @@
 				
 				$i++;
 			}
-			echo "</table><form action = \"bankWrite.php\" method = \"POST\"> 
+			echo "</table> 
 			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 			<label for=\"requiredCheck\">I have reviewed my changes</label>
 			<input type=\"submit\" value=\"Submit\"></form>";
