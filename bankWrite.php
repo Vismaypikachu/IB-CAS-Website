@@ -52,17 +52,17 @@
 		$num_rows = $result->num_rows;
 		echo $num_rows;
 		echo $_POST['quantity1'];
-		#if($num_rows > 0){
+		if($num_rows > 0){
 			#$i = 1;
 			#while($i < $num_rows){
 				#echo $_POST['item'.$i];
 				#$sql2 = "UPDATE inventory SET quantity = " .$_POST['item'.$i]. " WHERE name = '" .row["id"]."';";
 				#$result2 = $conn->query($sql);
 			#}
-		#}
-		#else{
+		}
+		else{
 			echo "\n0 results availible at this time";
-		#}
+		}
 		
 	}
 	else {
