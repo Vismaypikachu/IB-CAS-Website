@@ -44,9 +44,34 @@
 	if (mysqli_connect_errno()) {
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
+	
+	$result = $conn->query("SELECT id, name, quantity FROM inventory");
+	$num_rows = $result->num_rows;
+	if($num_rows > 0){
+		$i = 1;
+		echo "<form action = \"bankWrite.php\" method = \"POST\">"
+		while ($row = $result->fetch_assoc()) {
+			echo "<tr>
+				<td>". $row["id"] ."</td>
+				<td>". $row["name"] ."</td>
+				<td>". $row["quantity"] . "</td>
+				<td> <input type=\"text\" id=\"quantity" .$i. "\" name=\"quantity" .$i. "\"> </td>
+			</tr>";
 			
+			$i++;
+		}
+		echo "</table> 
+		<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
+		<label for=\"requiredCheck\">I have reviewed my changes</label>
+		<input type=\"submit\" value=\"Submit\"></form>";
+	}
+	else{
+		echo "0 results availible at this time";
+	}
+	
+	//if checkmarked
 	if(isset($_POST['requiredCheck'])){
-		/*
+		
 		echo "</table>";
 		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
@@ -62,33 +87,9 @@
 		else{
 			echo "0 results availible at this time";
 		}
-		*/
+		
 	}
-	else {
-		$result = $conn->query("SELECT id, name, quantity FROM inventory");
-		$num_rows = $result->num_rows;
-		if($num_rows > 0){
-			$i = 1;
-			echo "<form action = \"bankWrite.php\" method = \"POST\">"
-			while ($row = $result->fetch_assoc()) {
-				echo "<tr>
-					<td>". $row["id"] ."</td>
-					<td>". $row["name"] ."</td>
-					<td>". $row["quantity"] . "</td>
-					<td> <input type=\"text\" id=\"quantity" .$i. "\" name=\"quantity" .$i. "\"> </td>
-				</tr>";
-				
-				$i++;
-			}
-			echo "</table> 
-			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
-			<label for=\"requiredCheck\">I have reviewed my changes</label>
-			<input type=\"submit\" value=\"Submit\"></form>";
-		}
-		else{
-			echo "0 results availible at this time";
-		}
-	}
+
 	$conn->close();
 ?>
 </html>
