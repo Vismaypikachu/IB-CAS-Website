@@ -47,8 +47,7 @@
 			
 	if(isset($_POST['requiredCheck'])){
 		echo "</table>";
-		$sql = "SELECT id, name, quantity FROM inventory";
-		$result = $conn->query($sql);
+		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
 		echo $_POST['quantity1'];
 		if($num_rows > 0){
@@ -65,11 +64,11 @@
 		
 	}
 	else {
-		$sql = "SELECT id, name, quantity FROM inventory";
-		$result = $conn->query($sql);
+		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
+			echo "<form action = \"bankWrite.php\" method = \"POST\">"
 			while ($row = $result->fetch_assoc()) {
 				echo "<tr>
 					<td>". $row["id"] ."</td>
@@ -80,7 +79,7 @@
 				
 				$i++;
 			}
-			echo "</table> <form action = \"bankWrite.php\" method = \"POST\"> 
+			echo "</table> 
 			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 			<label for=\"requiredCheck\">I have reviewed my changes</label>
 			<input type=\"submit\" value=\"Submit\"></form>";
