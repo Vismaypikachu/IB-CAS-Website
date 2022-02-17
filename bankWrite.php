@@ -75,14 +75,13 @@
 		echo "</table>";
 		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
-		echo $_POST['quantity1'];
 		if($num_rows > 0){
 			$i = 1;
-			#while($i < $num_rows){
-				#echo $_POST['item'.$i];
+			while($i < $num_rows){
+				echo $_POST['quantity'.$i];
 				#$sql2 = "UPDATE inventory SET quantity = " .$_POST['item'.$i]. " WHERE name = '" .row["id"]."';";
 				#$result2 = $conn->query($sql);
-			#}
+			}
 		}
 		else{
 			echo "0 results availible at this time";
