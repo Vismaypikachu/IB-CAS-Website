@@ -81,7 +81,7 @@
 				#echo $_POST['quantity'.$i];
 				#$result2 = $conn->query(
 				echo "UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["id"]. "'";
-				#$i++;
+				$i++;
 			}
 		}
 		else{
