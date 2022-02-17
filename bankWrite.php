@@ -49,7 +49,7 @@
 	$num_rows = $result->num_rows;
 	if($num_rows > 0){
 		$i = 1;
-		echo "<form action = \"bankWrite.php\" method = \"POST\">"
+		echo "<form action = \"bankWrite.php\" method = \"POST\">";
 		while ($row = $result->fetch_assoc()) {
 			echo "<tr>
 				<td>". $row["id"] ."</td>
