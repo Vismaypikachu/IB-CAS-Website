@@ -77,7 +77,7 @@
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
-			while($i <= $num_rows){
+			while($row = $result->fetch_assoc()){
 				#echo $_POST['quantity'.$i];
 				#$result2 = $conn->query(
 				echo "UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["id"]. "'";
