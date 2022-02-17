@@ -79,8 +79,7 @@
 			$i = 1;
 			while($row = $result->fetch_assoc()){
 				#echo $_POST['quantity'.$i];
-				#result2 = $conn->query
-				echo ("UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["name"]. "'");
+				result2 = $conn->query("UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["name"]. "';");
 				$i++;
 			}
 		}
