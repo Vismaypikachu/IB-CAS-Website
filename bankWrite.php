@@ -79,6 +79,7 @@
 			$i = 1;
 			while($i < $num_rows){
 				echo $_POST['quantity'.$i];
+				$i++;
 				#$sql2 = "UPDATE inventory SET quantity = " .$_POST['item'.$i]. " WHERE name = '" .row["id"]."';";
 				#$result2 = $conn->query($sql);
 			}
