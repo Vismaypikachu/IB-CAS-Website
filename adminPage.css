@@ -16,3 +16,24 @@ th{
 tr:nth-child(even){
     background-color: #f2f2f2;
 }
+
+#titleBar{
+    background-color: aqua;
+    color: black;
+	
+    text-align: center;
+	font-size: 30px;
+	
+    padding: 11px;
+}
+
+#navBar{
+	background-color: #A494F2;
+    color: black;
+	
+    
+    text-align: center;
+	font-size: 15px;
+	
+	padding: 11px;
+}
