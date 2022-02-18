@@ -3,7 +3,7 @@
     $error='';
 
     if(isset($_POST['submit'])){
-        if(empty($_POST['username'] || empty($_POST['password'])){
+        if(empty($_POST['username']) || empty($_POST['password'])){
             $error = "Please enter all the required fields.";
         }
         else{
