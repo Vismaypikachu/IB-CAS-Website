@@ -13,11 +13,9 @@
 
 <?php
 	
-		
+	$bank = $_POST['banks'];
 	if(!empty($bank)){
 		
-	
-	$bank = $_POST['banks'];
 	$db_name = $bank;
 		
 		
