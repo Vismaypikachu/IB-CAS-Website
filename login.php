@@ -34,7 +34,7 @@
                 header("location: adminPage.php");
             }
             else{
-                $error = "invalid username or password";
+                $error = "a;lsdkfjadsklf username or password";
             }
             mysqli_close($conn);
         }
