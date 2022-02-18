@@ -5,7 +5,7 @@ $host = "ibcasserver.mysql.database.azure.com";
     $password = "jointechsavvyyouth1!";
     $db_name = "login";
       
-    $conn = mysqli_connect($conn, $host, $username, $password, $db_name, 3306);
+    $conn = mysqli_connect($host, $username, $password, $db_name, 3306);
     session_start();
     
     $user_check = $_SESSION['login_user'];
