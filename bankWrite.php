@@ -82,7 +82,9 @@
 		echo "</table> 
 		<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 		<label for=\"requiredCheck\">I have reviewed my changes</label>
-		<input type=\"submit\" value=\"Submit\"></form>";
+		<input type=\"submit\" value=\"Submit\"></form><br> 
+		
+		<h3> Thank you for submitting! Your changes were successfully merged.</h3>";
 	}
 	else{
 		echo "0 results availible at this time";
