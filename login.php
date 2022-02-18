@@ -31,7 +31,7 @@
 
 
             if($stmt->fetch()){
-                $_SESSION['login user'] = $username;
+                $_SESSION['login_user'] = $username;
                 header("location: adminPage.php");
             }
             else{
