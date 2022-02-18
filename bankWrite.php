@@ -9,14 +9,6 @@
 		</select>
 		<input type="submit" value="Submit">
 	</form>
-
-	<table id="table">
-        <tr>
-        	<th>ID</th>
-            <th>Name</th>
-        	<th>Quantity</th>
-			<th>Change Quantity</th>
-        </tr>
 	
 
 <?php
@@ -49,7 +41,7 @@
 	//if checkmarked
 	if(isset($_POST['requiredCheck'])){
 		
-		echo "</table>";
+		
 		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
@@ -65,6 +57,13 @@
 		}
 	}
 
+	echo " <table id=\"table\">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Quantity</th>
+					<th>Change Quantity</th>
+				</tr>";
 	$result = $conn->query("SELECT id, name, quantity FROM inventory");
 	$num_rows = $result->num_rows;
 	if($num_rows > 0){
