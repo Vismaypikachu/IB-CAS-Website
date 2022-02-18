@@ -45,6 +45,27 @@
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
 	
+
+	//if checkmarked
+	if(isset($_POST['requiredCheck'])){
+		
+		echo "</table>";
+		$result = $conn->query("SELECT id, name, quantity FROM inventory");
+		$num_rows = $result->num_rows;
+		if($num_rows > 0){
+			$i = 1;
+			while($row = $result->fetch_assoc()){
+				#echo $_POST['quantity'.$i];
+				$result2 = $conn->query("UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["name"]. "';");
+				$i++;
+			}
+		}
+		else{
+			echo "0 results availible at this time";
+		}
+		echo "<table>";
+	}
+
 	$result = $conn->query("SELECT id, name, quantity FROM inventory");
 	$num_rows = $result->num_rows;
 	if($num_rows > 0){
@@ -67,26 +88,6 @@
 	}
 	else{
 		echo "0 results availible at this time";
-	}
-	
-	//if checkmarked
-	if(isset($_POST['requiredCheck'])){
-		
-		echo "</table>";
-		$result = $conn->query("SELECT id, name, quantity FROM inventory");
-		$num_rows = $result->num_rows;
-		if($num_rows > 0){
-			$i = 1;
-			while($row = $result->fetch_assoc()){
-				#echo $_POST['quantity'.$i];
-				$result2 = $conn->query("UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["name"]. "';");
-				$i++;
-			}
-		}
-		else{
-			echo "0 results availible at this time";
-		}
-		
 	}
 
 	$conn->close();
