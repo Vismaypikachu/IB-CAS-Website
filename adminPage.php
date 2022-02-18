@@ -1,3 +1,13 @@
+<?php
+
+	include('session.php');
+
+	if(!isset($_SESSION['login_user'])){
+		header("location: index.html");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +18,7 @@
     <title>Request Page</title>
 </head>
 <body>
-
+	
 	<form id = "bankSelector" action = "bankWrite.php" method = "POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
