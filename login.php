@@ -10,13 +10,13 @@
             $username = trim($_POST['username']);
             $password = trim($_POST['password']);              
                 
-            $host = "ibcasserver.mysql.database.azure.com";
-            $username = "ibcasvismay@ibcasserver";
-            $password = "jointechsavvyyouth1!";
+            $dbhost = "ibcasserver.mysql.database.azure.com";
+            $dbusername = "ibcasvismay@ibcasserver";
+            $dbpassword = "jointechsavvyyouth1!";
             $db_name = "login";
         
             $conn = mysqli_init();
-            mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+            mysqli_real_connect($conn, $dbhost, $dbusername, $dbpassword, $db_name, 3306);
         
 
             $query = "SELECT username, password FROM login WHERE username=? AND password=? LIMIT 1";
@@ -34,7 +34,7 @@
                 header("location: adminPage.php");
             }
             else{
-                $error = "a;lsdkfjadsklf username or password";
+                $error = $username;
             }
             mysqli_close($conn);
         }
