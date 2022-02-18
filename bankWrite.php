@@ -63,7 +63,6 @@
 		else{
 			echo "0 results availible at this time";
 		}
-		echo "<table>";
 	}
 
 	$result = $conn->query("SELECT id, name, quantity FROM inventory");
