@@ -3,12 +3,12 @@
     $error='';
 
     if(isset($_POST['submit'])){
-        if(empty($_POST['username']) || empty($_POST['password']))
+        if(empty($_POST['username']) || empty($_POST['password'])){
             $error = "Please enter all the required fields.";
-        
+        }
         else{
-            $username = $_POST['username'];
-            $password = $_POST['password'];              
+            $username = trim($_POST['username']);
+            $password = trim($_POST['password']);              
                 
             $host = "ibcasserver.mysql.database.azure.com";
             $username = "ibcasvismay@ibcasserver";
@@ -29,6 +29,7 @@
 
 
             if($stmt->fetch()){
+                session_start();
                 $_SESSION['login_user'] = $username;
                 header("location: adminPage.php");
             }
