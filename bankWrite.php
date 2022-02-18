@@ -12,17 +12,12 @@
 	
 
 <?php
-	#variables
+	
+		
+	if(!empty($bank)){
+		
+	
 	$bank = $_POST['banks'];
-	#$i = $_POST[];
-	#for(int i = 0; i < 10; i++){
-		
-	#}
-		
-	if(empty($bank)){
-		$bank = "northwestHarvest";
-		$db_name = "northwestHarvest";
-	}
 	$db_name = $bank;
 		
 		
@@ -91,5 +86,6 @@
 	}
 
 	$conn->close();
+}
 ?>
 </html>

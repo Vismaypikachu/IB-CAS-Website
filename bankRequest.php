@@ -10,7 +10,7 @@
 	
 
 <?php
-
+	
 	$bank = $_POST['banks'];
 	
 	if(empty($bank)){
