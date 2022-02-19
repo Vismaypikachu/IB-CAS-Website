@@ -28,7 +28,7 @@
 		die("Failed to connect to MYSQL: ".mysqli_connect_error());
 	}
 		
-
+	echo $_POST['requiredCheck'];
 	//if checkmarked
 	if(isset($_POST['requiredCheck'])){
 		echo "Hello";
