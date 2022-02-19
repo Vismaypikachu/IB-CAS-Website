@@ -9,20 +9,6 @@
 </head>
 <body>
 
-	<header id = "header">
-		<div id="titleBar"> <!-- Title Bar-->
-			<h1>IB CAS Project</h1>
-		</div>
-		
-		<div id="navBar"> <!-- Nav Bar-->
-			<p>
-				<a href = "requestPage.php">Request Page</a>
-				<a href = "loginPage.php">Admin Page</a>           
-				<a href='logout.php'>Logout</a>
-			</p>
-		</div>
-	</header>
-
 	<form id = "bankSelector" action = "bankRequest.php" method = "POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>

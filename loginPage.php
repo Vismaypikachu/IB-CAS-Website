@@ -18,19 +18,6 @@
 </head>
 
 <body>
-    <header id = "header">
-		<div id="titleBar"> <!-- Title Bar-->
-			<h1>IB CAS Project</h1>
-		</div>
-		
-		<div id="navBar"> <!-- Nav Bar-->
-			<p>
-				<a href = "requestPage.php">Request Page</a>
-				<a href = "loginPage.php">Admin Page</a>           
-				<a href='logout.php'>Log Out</a>
-			</p>
-		</div>
-	</header>
 
     <div id="login">
         <h2>Login Form</h2>
