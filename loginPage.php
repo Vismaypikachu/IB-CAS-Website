@@ -21,7 +21,7 @@
 
     <div id="login">
         <h2>Login Form</h2>
-        <form action="" action="loginPage.php" method="POST">
+        <form action="loginPage.php" method="POST">
             <label>Username: </label>
             <input id="name" name="username" placeholder="username" type="text">
             <label>Password: </label>
