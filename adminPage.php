@@ -19,7 +19,7 @@
 </head>
 <body>
 	
-	<form id = "bankSelector" action = "bankWrite.php" method = "POST">
+	<form action = "bankWrite.php" method = "POST">
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
 			<option>Select One</option>
