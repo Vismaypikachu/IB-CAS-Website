@@ -2,7 +2,7 @@
     include('login.php');
     
 	if(isset($_SESSION['login_user'])){
-        header("location: bankWrite.php");
+        header("location: adminPage.php");
     }
 ?>
 
