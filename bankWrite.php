@@ -8,7 +8,7 @@
 			<option value="northwestHarvest">Northwest Harvest</option>
 		</select>
 		<input type="submit" value="Submit">
-	
+	</form>
 	
 
 <?php
@@ -17,7 +17,7 @@
 	if(!empty($bank)){
 		
 		$db_name = $bank;
-			
+		$_POST['banks'] = $db_name;
 			
 		$host = "ibcasserver.mysql.database.azure.com";
 		$username = "ibcasvismay@ibcasserver";
@@ -61,7 +61,7 @@
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
-			#echo "<form action = \"bankWrite.php\" method = \"POST\">";
+			echo "<form action = \"bankWrite.php\" method = \"POST\">";
 			while ($row = $result->fetch_assoc()) {
 				echo "<tr>
 					<td>". $row["id"] ."</td>
