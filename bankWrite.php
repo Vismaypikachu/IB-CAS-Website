@@ -13,7 +13,7 @@
 
 <?php
 	
-	
+	echo isset($_POST['requiredCheck']);
 	if(isset($_POST['requiredCheck']) || !empty($bank)){
 		$db_name = $bank;
 		$bank = $_POST['banks'];
