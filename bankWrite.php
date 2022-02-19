@@ -14,7 +14,7 @@
 <?php
 	
 	$bank = $_POST['banks'];
-		
+	if(!empty($bank)){
 	$db_name = $bank;
 
 	$host = "ibcasserver.mysql.database.azure.com";
@@ -81,6 +81,6 @@
 	}
 
 	$conn->close();
-	
+}
 ?>
 </html>
