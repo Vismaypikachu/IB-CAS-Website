@@ -13,10 +13,10 @@
 
 <?php
 	
-	$bank = $_POST['banks'];
-	if(!empty($bank)){
+	
+	if(isset($_POST['requiredCheck']) || !empty($bank)){
 		$db_name = $bank;
-
+		$bank = $_POST['banks'];
 		$host = "ibcasserver.mysql.database.azure.com";
 		$username = "ibcasvismay@ibcasserver";
 		$password = "jointechsavvyyouth1!";
@@ -82,7 +82,7 @@
 		$conn->close();
 	}
 	else{
-		echo $_POST['requiredCheck'];
+		echo "Please select a database!";
 	}
 ?>
 </html>
