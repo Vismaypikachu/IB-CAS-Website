@@ -1,20 +1,12 @@
 <html>
 	<link rel="stylesheet" href="adminPage.css">
-
-	<form id = "bankSelector" action = "bankWrite.php" method = "POST">
-		<label for="banks">Choose a Donation Center:</label>
-		<select id="banks" name="banks" required>
-			<option>Select One</option>
-			<option value="northwestHarvest">Northwest Harvest</option>
-		</select>
-		<input type="submit" value="Submit">
-	</form>
 	
 
 <?php
+
+
 	
-	echo isset($_POST['requiredCheck']);
-	if(isset($_POST['requiredCheck']) || !empty($bank)){
+	if(!empty($bank)){
 		$db_name = $bank;
 		$bank = $_POST['banks'];
 		$host = "ibcasserver.mysql.database.azure.com";

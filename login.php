@@ -31,7 +31,7 @@
             if($stmt->fetch()){
                 session_start();
                 $_SESSION['login_user'] = $username;
-                header("location: bankWrite.php");
+                header("location: adminPage.php");
             }
             else{
                 $error = "invalid username or password";
