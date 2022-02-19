@@ -31,7 +31,7 @@
 
 	//if checkmarked
 	if(isset($_POST['requiredCheck'])){
-			
+		echo "Hello";
 		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
