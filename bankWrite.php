@@ -82,7 +82,6 @@
 		$conn->close();
 	}
 	else{
-		echo "Hello";
 		echo $_POST['requiredCheck'];
 	}
 ?>
