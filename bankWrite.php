@@ -16,9 +16,10 @@
 	$bank = $_POST['banks'];
 	if(!empty($bank)){
 		
+		
+		$_POST['banks'] = $bank;
 		$db_name = $bank;
-		$_POST['banks'] = $db_name;
-			
+		
 		$host = "ibcasserver.mysql.database.azure.com";
 		$username = "ibcasvismay@ibcasserver";
 		$password = "jointechsavvyyouth1!";
