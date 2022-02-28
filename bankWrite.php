@@ -6,6 +6,7 @@
 
 
 	$bank = $_POST['banks'];
+	echo $bank;
 	if(!empty($bank)){
 		$db_name = $bank;
 		
@@ -51,7 +52,7 @@
 			$i = 1;
 			echo "<form action = \"bankWrite.php\" method = \"POST\">
 				<tr>
-					<td><input type=\"text\" disabled id=\"banks\" name = \"banks\" value=".$bank."></td>
+					<td> <input type=\"text\" id=\"banks\" name = \"banks\" value=".$bank." disabled> </td>
 				</tr>
 			";
 			
