@@ -52,7 +52,7 @@
 			$i = 1;
 			echo "<form action = \"bankWrite.php\" method = \"POST\">
 				<tr>
-					<td> <input type=\"text\" id=\"banks\" name = \"banks\" value=".$bank." disabled> </td>
+					<td> <input type=\"text\" id=\"banks\" name = \"banks\" value=".$bank." style=\"display: none;\"> </td>
 				</tr>
 			";
 			
@@ -61,7 +61,7 @@
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
 					<td>". $row["quantity"] . "</td>
-					<td> <input type=\"text\" id=\"quantity" .$i. "\" name=\"quantity" .$i. "\"> </td>
+					<td> <input type=\"text\" id=\"quantity" .$i. "\" name=\"quantity" .$i. "\" required> </td>
 				</tr>";
 				
 				$i++;
