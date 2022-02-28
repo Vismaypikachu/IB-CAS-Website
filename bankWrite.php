@@ -51,7 +51,7 @@
 			$i = 1;
 			echo "<form action = \"bankWrite.php\" method = \"POST\">
 				<tr>
-					<td><input type=\"text\" disabled id=\"banks\" value=".$bank."></td>
+					<td><input type=\"text\" disabled id=\"banks\" name = \"banks\" value=".$bank."></td>
 				</tr>
 			";
 			
