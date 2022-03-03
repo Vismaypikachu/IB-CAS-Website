@@ -21,7 +21,7 @@
     }
 		
            
-    $sql = "SELECT name, access FROM userInfo";
+    $sql = "SELECT access FROM userInfo WHERE name = \"".$username."\"";
 	$result = $conn->query($sql);
 	
 	echo $result;
