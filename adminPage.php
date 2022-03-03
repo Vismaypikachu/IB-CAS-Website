@@ -24,7 +24,7 @@
     $sql = "SELECT name, access FROM userInfo";
 	$result = $conn->query($sql);
 	
-	echo result;
+	echo $result;
 
     $conn->close();
 
