@@ -5,6 +5,29 @@
 	if(!isset($_SESSION['login_user'])){
 		header("location: index.html");
 	}
+	
+	
+	$host = "ibcasserver.mysql.database.azure.com";
+    $username = "ibcasvismay@ibcasserver";
+    $password = "jointechsavvyyouth1!";
+	$db_name = "users":
+
+
+    $conn = mysqli_init();
+    mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+
+    if (mysqli_connect_errno()) {
+      	die("Failed to connect to MYSQL: ".mysqli_connect_error());
+    }
+		
+           
+    $sql = "SELECT name, access FROM userInfo";
+	$result = $conn->query($sql);
+	
+	echo result;
+
+    $conn->close();
+
 ?>
 
 
