@@ -21,7 +21,7 @@
     }
 		
            
-    $sql = "SELECT access FROM userInfo WHERE name = '".$username."'";
+    $sql = "SELECT access FROM userInfo WHERE name = '.$username.'";
 	$result = $conn->query($sql);
 
     $conn->close();
