@@ -31,7 +31,7 @@
             if($stmt->fetch()){
                 session_start();
                 $_SESSION['login_user'] = $username;
-                header("location: adminPage.php");
+                header("location: requestPage.php");
             }
             else{
                 $error = "invalid username or password";
