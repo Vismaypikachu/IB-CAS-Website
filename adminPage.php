@@ -26,7 +26,7 @@
 
     $conn->close();
 
-	echo $result;
+	echo mysqli_fetch_assoc($result);
 
 ?>
 
