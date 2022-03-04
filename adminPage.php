@@ -26,6 +26,8 @@
 
     $conn->close();
 
+	echo $sql;
+
 ?>
 
 
