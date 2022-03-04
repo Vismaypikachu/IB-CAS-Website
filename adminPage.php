@@ -10,7 +10,7 @@
 	$host = "ibcasserver.mysql.database.azure.com";
     $username = "ibcasvismay@ibcasserver";
     $password = "jointechsavvyyouth1!";
-	$db_name = "users":
+	$db_name = "users";
 
 
     $conn = mysqli_init();
