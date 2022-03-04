@@ -1,3 +1,13 @@
+<?php
+
+	include('session.php');
+
+	if(!isset($_SESSION['login_user'])){
+		header("location: index.html");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
