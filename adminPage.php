@@ -20,8 +20,8 @@
       	die("Failed to connect to MYSQL: ".mysqli_connect_error());
     }
 		
-           
-    $sql = "SELECT access FROM userInfo WHERE name = '".$_SESSION['login_user']."'";
+    $currentUsername = $_SESSION['login_user'];
+    $sql = "SELECT access FROM userInfo WHERE name = '$currentUsername'";
 	$result = $conn->query($sql);
 
     $conn->close();
