@@ -4,7 +4,6 @@
 
 <?php
 
-
 	$bank = $_POST['banks'];
 	echo $bank;
 	if(!empty($bank)){
