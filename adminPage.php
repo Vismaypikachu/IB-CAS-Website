@@ -24,10 +24,11 @@
     $sql = "SELECT access FROM userInfo WHERE name = '$currentUsername'";
 	$result = $conn->query($sql);
 
+
     $conn->close();
-
-	echo mysqli_fetch_assoc($result);
-
+	
+  
+	
 ?>
 
 
