@@ -28,8 +28,7 @@
 	    $bankaccess[] = $row['access'];
 	}
 	$bankaccessstring = implode(",", $bankaccess);
-	$string = $row['access'];
-	echo $string;
+	echo $bankaccessstring;
 
     $conn->close();
 	
