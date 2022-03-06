@@ -24,6 +24,8 @@
     $sql = "SELECT access FROM userInfo WHERE name = '$currentUsername'";
 	$result = $conn->query($sql);
 
+	$string = $row['access'];
+	echo $string;
 
     $conn->close();
 	
