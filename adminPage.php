@@ -55,12 +55,11 @@
 		<?php
 			foreach($bankArray as $bankName){
 				echo "
-					<option value=\"$bankName\">$bankName</option>
-					</select>
+					<option value=\"".$bankName."\">".$bankName."</option>
 				";			
 			}
 		?>
-
+		</select>
 
 		
 		<input type="submit" value="Submit">
