@@ -20,8 +20,13 @@
 		<div id="navBar"> <!-- Nav Bar-->
 			<p>
 				<a href = "requestPage.php">Request Page</a>
-				<a href = "loginPage.php">Admin Page</a>           
-				<a href='logout.php'>Log Out</a>
+				<a href = "loginPage.php">Admin Page</a>      
+				
+				<?php
+					if(!isset($_SESSION['login_user'])){
+						echo "<a href='logout.php'>Log Out</a>";
+					}
+				?>
 			</p>
 		</div>
 	</header>
