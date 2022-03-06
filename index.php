@@ -23,7 +23,7 @@
 				<a href = "adminPage.php">Admin Page</a>      
 				
 				<?php
-					if(!isset($_SESSION['login_user'])){
+					if(isset($_SESSION['login_user'])){
 						echo "<a href='logout.php'>Log Out</a>";
 					}
 				?>
