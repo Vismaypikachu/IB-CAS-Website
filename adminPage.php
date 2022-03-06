@@ -24,6 +24,10 @@
     $sql = "SELECT access FROM userInfo WHERE name = '$currentUsername'";
 	$result = $conn->query($sql);
 
+	while($row = mysqli_fetch_array($result)){
+	    $bankaccess[] = $row['access'];
+	}
+	$bankaccessstring = implode(",", $bankaccess);
 	$string = $row['access'];
 	echo $string;
 
