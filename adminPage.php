@@ -3,7 +3,7 @@
 	include('session.php');
 
 	if(!isset($_SESSION['login_user'])){
-		header("location: index.html");
+		header("location: loginPage.php");
 	}
 	
 	
