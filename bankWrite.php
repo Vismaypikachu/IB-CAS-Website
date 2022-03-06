@@ -5,7 +5,6 @@
 <?php
 
 	$bank = $_POST['banks'];
-	echo $bank;
 	if(!empty($bank)){
 		$db_name = $bank;
 		
