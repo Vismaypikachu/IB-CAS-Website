@@ -25,10 +25,10 @@
 	$result = $conn->query($sql);
 
 	while($row = mysqli_fetch_array($result)){
-	    $bankaccess[] = $row['access'];
+	    $bankAccess[] = $row['access'];
 	}
-	$bankaccessstring = implode(",", $bankaccess);
-	echo $bankaccessstring;
+	$bankAccessString = implode(",", $bankAccess);
+	$bankArray = explode(',', $bankAccessString);
 
     $conn->close();
 	
@@ -52,8 +52,17 @@
 		<label for="banks">Choose a Donation Center:</label>
 		<select id="banks" name="banks" required>
 			<option>Select One</option>
-			<option value="northwestHarvest">Northwest Harvest</option>
-		</select>
+		<?php
+			foreach($bankArray as $bankName){
+				echo "
+					<option value=\"$bankName\">$bankName</option>
+					</select>
+				";			
+			}
+		?>
+
+
+		
 		<input type="submit" value="Submit">
 	</form>
 
