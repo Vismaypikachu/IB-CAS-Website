@@ -1,3 +1,4 @@
+<?php include('header.php'); ?>
 <html>
 	<link rel="stylesheet" href="requestPage.css">
 
