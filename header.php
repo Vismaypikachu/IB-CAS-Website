@@ -17,6 +17,7 @@
 			</p>
 		</div>
 	</header>
+    <div id="ghost"> </div>
 
     <script>
         window.onscroll = function() {myFunction()};
