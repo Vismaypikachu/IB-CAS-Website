@@ -29,10 +29,10 @@
             var scrollTop = $(window).scrollTop();
 
             if(headerTop < scrollTop){
-                $("header").addClass("fixed");
+                header.addClass("fixed");
                 $(".ghost").removeClass("hidden");
             }else{
-                $("header").removeClass("fixed");
+                header.removeClass("fixed");
                 $(".ghost").addClass("hidden");
             }
         });    
