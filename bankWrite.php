@@ -1,6 +1,6 @@
 <html>
+	<?php include('header.php'); ?>
 	<link rel="stylesheet" href="adminPage.css">	
-<?php include('header.php'); ?>
 <?php
 
 	$bank = $_POST['banks'];

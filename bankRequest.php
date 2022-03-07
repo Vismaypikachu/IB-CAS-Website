@@ -1,5 +1,5 @@
-<?php include('header.php'); ?>
 <html>
+	<?php include('header.php'); ?>
 	<link rel="stylesheet" href="requestPage.css">
 
 	<table id="table">

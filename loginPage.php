@@ -1,6 +1,5 @@
 <?php
     include('login.php');
-    include('header.php');
 
 	if(isset($_SESSION['login_user'])){
         header("location: adminPage.php");
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="loginPage.css">
     <title>Login Page</title>
 </head>
+<?php include('header.php'); ?>
 
 <body>
 

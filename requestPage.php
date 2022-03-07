@@ -1,5 +1,3 @@
-<?php include('header.php'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,7 @@
 	<link rel="stylesheet" href="requestPage.css">
     <title>Request Page</title>
 </head>
-
+<?php include('header.php'); ?>
 <body>
 
 	<form id = "bankSelector" action = "bankRequest.php" method = "POST">
