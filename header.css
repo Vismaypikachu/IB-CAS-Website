@@ -1,9 +1,9 @@
 header{
-    border: 2px solid blue;
+    border: 2px solid;
 }
 
 header, .ghost{
-    height: 200px;
+    height: 240px;
 }
 
 .ghost{
@@ -19,4 +19,24 @@ header, .ghost{
     left: 0;
     top: 0;
     width: 100%;
+}
+#titleBar{
+    background-color: aqua;
+    color: black;
+    
+    text-align: center;
+    font-size: 30px;
+    
+    padding: 11px;
+}
+  
+#navBar{
+    background-color: #A494F2;
+    color: black;
+    
+      
+    text-align: center;
+    font-size: 15px;
+      
+    padding: 11px;
 }
