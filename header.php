@@ -2,7 +2,6 @@
     <head>
         <link rel="stylesheet" href="header.css">
     </head>
-    <body>
     <!-- HEADER CONTENT -->
 	<header id = "header">
 		<div id="titleBar"> <!-- Title Bar-->
@@ -18,24 +17,25 @@
 			</p>
 		</div>
 	</header>
+    <div id="ghost"> </div>
 
-    <div id="ghost hidden"> </div>
-    </body>
     <script>
-        var header = $("header");
-        var headerTop = header.offset().top;
+        window.onscroll = function() {myFunction()};
 
-        $(window).scroll(function(){
-            var scrollTop = $(window).scrollTop();
+        // Get the header
+        var header = document.getElementById("header");
 
-            if(headerTop < scrollTop){
-                header.addClass("fixed");
-                $(".ghost").removeClass("hidden");
-            }else{
-                header.removeClass("fixed");
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
                 $(".ghost").addClass("hidden");
             }
-        });    
+        }
     </script>
 
 </html>

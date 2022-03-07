@@ -1,24 +1,36 @@
-header{
-    border: 2px solid;
-}
-
-header, .ghost{
-    height: 240px;
-}
-
-.ghost{
-    background: yellow;
-}
-
-.hidden{
-    display: none;
-}
-
-.fixed {
-    position: fixed; 
-    left: 0;
+.sticky {
+    position: fixed;
     top: 0;
     width: 100%;
+  }
+  
+.sticky + .content {
+   padding-top: 102px;
+}
+  
+#ghost{
+    height: 240px;
+}
+  
+#titleBar{
+    background-color: aqua;
+    color: black;
+    
+    text-align: center;
+    font-size: 30px;
+    
+    padding: 11px;
+}
+  
+#navBar{
+    background-color: #A494F2;
+    color: black;
+    
+      
+    text-align: center;
+    font-size: 15px;
+      
+    padding: 11px;
 }
 
 h1, h2, p {
