@@ -20,3 +20,7 @@ header, .ghost{
     top: 0;
     width: 100%;
 }
+
+h1, h2, p {
+    margin: 0;
+}
