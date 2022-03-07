@@ -14,6 +14,7 @@
 <body id = "container">	
 	<!-- BODY CONTENT -->
 	<div id = "content">
+		<div id="ghost"> </div>
 		
 		<div id = "about us"> 
 			<h2 style = "margin: 6px">About Us</h2>
