@@ -6,45 +6,6 @@
 	width: 100%;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
-}
-
-#ghost{
-	height: 240px;
-}
-
-#titleBar{
-    background-color: aqua;
-    color: black;
-	
-    text-align: center;
-	font-size: 30px;
-	
-    padding: 11px;
-}
-
-#navBar{
-	background-color: #A494F2;
-    color: black;
-	
-    
-    text-align: center;
-	font-size: 15px;
-	
-	padding: 11px;
-}
-
-h1, h2, p {
-    margin: 0;
-}
-
 #intro{
 	background-color: white;
     color: black;
