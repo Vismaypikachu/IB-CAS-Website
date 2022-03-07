@@ -22,7 +22,7 @@
     <div id="ghost hidden"> </div>
     </body>
     <script>
-        var header = $("header");
+        var header = $(header);
         var headerTop = header.offset().top;
 
         $(window).scroll(function(){
