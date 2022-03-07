@@ -21,7 +21,7 @@
 		</div>
 		
 		<div id = "intro"> 
-			<p>Welcome to the INSERT NAME webpage. Here we do ...</p>
+			<p>Welcome to the INSERT NME webpage. Here we do ...</p>
 		</div>
 		
 		<div id = "our team"> 

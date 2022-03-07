@@ -38,7 +38,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include('header.php'); ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +46,7 @@
 	<link rel="stylesheet" href="adminPage.css">
     <title>Request Page</title>
 </head>
+<?php include('header.php'); ?>
 <body>
 	
 	<form action = "bankWrite.php" method = "POST">
