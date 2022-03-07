@@ -17,25 +17,23 @@
 			</p>
 		</div>
 	</header>
-    <div id="ghost"> </div>
+    <div id="ghost hidden"> </div>
 
     <script>
-        window.onscroll = function() {myFunction()};
+        var header = $("header");
+        var headerTop = header.offset().top;
 
-        // Get the header
-        var header = document.getElementById("header");
+        $(window).scroll(function(){
+            var scrollTop = $(window).scrollTop();
 
-        // Get the offset position of the navbar
-        var sticky = header.offsetTop;
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
+            if(headerTop < scrollTop){
+                $("header").addClass("fixed");
+                $(".ghost").removeClass("hidden");
+            }else{
+                $("header").removeClass("fixed");
                 $(".ghost").addClass("hidden");
             }
-        }
+        });    
     </script>
 
 </html>
