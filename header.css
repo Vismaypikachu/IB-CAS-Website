@@ -2,6 +2,27 @@ header{
     border: 2px solid;
 }
 
+#titleBar{
+    background-color: aqua;
+    color: black;
+	
+    text-align: center;
+	font-size: 30px;
+	
+    padding: 11px;
+}
+
+#navBar{
+	background-color: #A494F2;
+    color: black;
+	
+    
+    text-align: center;
+	font-size: 15px;
+	
+	padding: 11px;
+}
+
 h1, h2, p {
     margin: 0;
 }
