@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="header.css">
     </head>
+    <body>
     <!-- HEADER CONTENT -->
 	<header id = "header">
 		<div id="titleBar"> <!-- Title Bar-->
@@ -17,8 +18,9 @@
 			</p>
 		</div>
 	</header>
-    <div id="ghost hidden"> </div>
 
+    <div id="ghost hidden"> </div>
+    </body>
     <script>
         var header = $("header");
         var headerTop = header.offset().top;
