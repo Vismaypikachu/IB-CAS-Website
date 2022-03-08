@@ -20,13 +20,14 @@
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
 			if(isset($_POST['newItemCheck'])){
+				$duplicate = false;
 				$newItem = $_POST['newItemName'];
 				$checkexists = $conn->query("SELECT * FROM $bank WHERE name = \"$newItem\";");
 				if($checkexists->num_rows == 0){
 					$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
 				}
 				else{
-					echo "<h3>Duplicate name, please try again or contact a site admin.</h3>";
+					$duplicate = true;
 				}
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
@@ -96,7 +97,13 @@
 			";
 				
 			if(isset($_POST['requiredCheck'])){ 
-				echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";
+				if($duplicate == false){
+					echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";
+				}
+				else{
+					echo "<h3>Duplicate name, please try again or contact a site admin. Stock changes were successfully merged.</h3>";
+				}
+				
 			}
 		}
 		else{
