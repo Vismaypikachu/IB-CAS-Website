@@ -69,7 +69,7 @@
 			echo "</table> 
 			<table name = \"table2\" id = \"table2\" style=\"width:20%\">
 				<th>New Item?</th>
-				<th>New Item Name</th>
+				<th>Item Name</th>
 
 				<tr>
 					<td> <input type=\"checkbox\" id=\"newItemCheck\" name=\"newItemCheck\"> </td>
