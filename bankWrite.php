@@ -60,13 +60,23 @@
 					<td>". $row["name"] ."</td>
 					<td>". $row["stock"] . "</td>
 					<td>". $row["wantedStock"] . "</td>
-					<td> <input type=\"text\" id=\"stock" .$i. "\" name=\"stock" .$i. "\" required> </td>
-					<td> <input type=\"text\" id=\"wantedStock" .$i. "\" name=\"wantedStock" .$i. "\" required> </td>
+					<td> <input type=\"text\" id=\"stock" .$i. "\" name=\"stock" .$i. "\" placeholder=\"Ex. 25\" required> </td>
+					<td> <input type=\"text\" id=\"wantedStock" .$i. "\" name=\"wantedStock" .$i. "\" placeholder=\"Ex. 40\" required> </td>
 				</tr>";
 				
 				$i++;
 			}
 			echo "</table> 
+			<table id = \"table2\">
+				<th>Add a New Item</th>
+				<th>New Item Name</th>
+
+				<tr>
+					<td> <input type=\"checkbox\" id=\"newItemCheck\" name=\"newItemCheck\"> </td>
+					<td> <input type=\"text\" id=\"newItemCheck\" name=\"newItemCheck\" placeholder=\"Ex. Orange\" > </td>
+				</tr>
+			</table>
+
 			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 			<label for=\"requiredCheck\">I have reviewed my changes</label>
 			<input type=\"submit\" value=\"Submit\"></form><br>";
