@@ -67,7 +67,7 @@
 				$i++;
 			}
 			echo "</table> 
-			<table id = \"table2\">
+			<table id = \"table2\"  style=\"width:100%">
 				<th>Add a New Item</th>
 				<th>New Item Name</th>
 
