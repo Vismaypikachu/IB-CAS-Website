@@ -21,7 +21,7 @@
 		if(isset($_POST['requiredCheck'])){
 			if(isset($_POST['deleteItemCheck'])){
 				$deleteItem = $_POST['deleteItemName'];
-				$conn->query("DELETE * FROM $bank WHERE name = \"$deleteItem\";");
+				$conn->query("DELETE FROM $bank WHERE name = \"$deleteItem\";");
 			}
 
 			if(isset($_POST['newItemCheck'])){
