@@ -22,9 +22,12 @@
 			if(isset($_POST['newItemCheck'])){
 				$newItem = $_POST['newItemName'];
 				$checkexists = $conn->query("SELECT * FROM $bank WHERE name = \"$newItemName\";");
-				if($checkexists->num_rows > 0){}
-				else{
+				if($checkexists->num_rows == 0){
+					echo $checkexists->num_rows;
 					$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
+				}
+				else{
+					
 				}
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
