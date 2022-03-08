@@ -26,6 +26,7 @@
 				$i = 1;
 				while($row = $result->fetch_assoc()){
 					$result2 = $conn->query("UPDATE $bank SET stock = " .$_POST["stock".$i]. " WHERE name = '" .$row["name"]. "';");
+					$result3 = $conn->query("UPDATE $bank SET wantedStock = " .$_POST["wantedStock".$i]. " WHERE name = '" .$row["name"]. "';");
 					$i++;
 				}
 			}
