@@ -25,7 +25,9 @@
 				if($checkexists->num_rows == 0){
 					$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
 				}
-				else{}
+				else{
+					echo "<h3>Duplicate name, please try again or contact a site admin.</h3>
+				}
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
@@ -93,7 +95,9 @@
 				</form>
 			";
 				
-			if(isset($_POST['requiredCheck'])){ echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";}
+			if(isset($_POST['requiredCheck'])){ 
+				echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";
+			}
 		}
 		else{
 			echo "0 results availible at this time";
