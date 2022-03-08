@@ -26,7 +26,7 @@
 					$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
 				}
 				else{
-					echo "<h3>Duplicate name, please try again or contact a site admin.</h3>
+					echo "<h3>Duplicate name, please try again or contact a site admin.</h3>";
 				}
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
