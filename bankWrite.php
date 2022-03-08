@@ -19,6 +19,11 @@
 			
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
+			if(isset($_POST['deleteItemCheck'])){
+				$deleteItem = $_POST['deleteItemName'];
+				$conn->query("DELETE * FROM $bank WHERE name = \"$newItem\";");
+			}
+
 			if(isset($_POST['newItemCheck'])){
 				$duplicate = false;
 				$newItem = $_POST['newItemName'];
@@ -86,6 +91,17 @@
 					<tr>
 						<td> <input type=\"checkbox\" id=\"newItemCheck\" name=\"newItemCheck\"> </td>
 						<td> <input type=\"text\" id=\"newItemName\" name=\"newItemName\" placeholder=\"Ex. Orange\" > </td>
+					</tr>
+				</table>
+
+
+				<table name = \"table3\" id = \"table3\" style=\"width:20%\">
+					<th>Delete Item?</th>
+					<th>Item Name</th>
+
+					<tr>
+						<td> <input type=\"checkbox\" id=\"deleteItemCheck\" name=\"deleteItemCheck\"> </td>
+						<td> <input type=\"text\" id=\"deleteItemName\" name=\"deleteItemName\" placeholder=\"Ex. Orange\" > </td>
 					</tr>
 				</table>
 
