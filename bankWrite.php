@@ -64,8 +64,8 @@
 					<td>". $row["name"] ."</td>
 					<td>". $row["stock"] . "</td>
 					<td>". $row["wantedStock"] . "</td>
-					<td> <input type=\"text\" id=\"stock" .$i. "\" name=\"stock" .$i. "\" placeholder=\"Ex. 25\" required> </td>
-					<td> <input type=\"text\" id=\"wantedStock" .$i. "\" name=\"wantedStock" .$i. "\" placeholder=\"Ex. 40\" required> </td>
+					<td> <input type=\"text\" id=\"stock" .$i. "\" name=\"stock" .$i. "\" placeholder=\"Ex. 25\"> </td>
+					<td> <input type=\"text\" id=\"wantedStock" .$i. "\" name=\"wantedStock" .$i. "\" placeholder=\"Ex. 40\"> </td>
 				</tr>";
 				
 				$i++;
@@ -84,7 +84,9 @@
 
 				<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
 				<label for=\"requiredCheck\">I have reviewed my changes</label>
-				<input type=\"submit\" value=\"Submit\"></form><br>
+				<input type=\"submit\" value=\"Submit\">
+				
+				</form>
 			";
 				
 			if(isset($_POST['requiredCheck'])){ echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";}
