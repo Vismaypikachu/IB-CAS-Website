@@ -21,14 +21,11 @@
 		if(isset($_POST['requiredCheck'])){
 			if(isset($_POST['newItemCheck'])){
 				$newItem = $_POST['newItemName'];
-				$checkexists = $conn->query("SELECT * FROM $bank WHERE name = \"$newItemName\";");
+				$checkexists = $conn->query("SELECT * FROM $bank WHERE name = \"$newItem\";");
 				if($checkexists->num_rows == 0){
-					echo $checkexists->num_rows;
 					$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
 				}
-				else{
-					
-				}
+				else{}
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
