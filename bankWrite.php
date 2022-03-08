@@ -19,7 +19,7 @@
 			
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
-			
+			echo $bank;
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
 			if($num_rows > 0){
