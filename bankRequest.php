@@ -6,7 +6,8 @@
         <tr>
         	<th>ID</th>
             <th>Name</th>
-        	<th>Quantity</th>
+        	<th>Stock</th>
+			<th>Wanted Stock</th>
         </tr>
 	
 
@@ -16,15 +17,13 @@
 	
 	if(empty($bank)){
 		$bank = "northwestHarvest";
-		$db_name = "northwestHarvest";
 	}
-
-	$db_name = $bank;
 	
 	
 	$host = "ibcasserver.mysql.database.azure.com";
     $username = "ibcasvismay@ibcasserver";
     $password = "jointechsavvyyouth1!";
+	$db_name = "foodBanks";
 
 
     $conn = mysqli_init();
@@ -35,12 +34,12 @@
     }
 		
            
-    $sql = "SELECT id, name, quantity FROM inventory";
+    $sql = "SELECT id, name, stock, wantedStock FROM $bank";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0){
 	
 		while ($row = $result->fetch_assoc()) {
-			echo "<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["quantity"] . "</td></tr>";
+			echo "<tr><td>". $row["id"] ."</td><td>". $row["name"] ."</td><td>". $row["stock"] . "</td></tr>". $row["wantedStock"] . "</td></tr>";
 		}
 		echo "</table>";
     }

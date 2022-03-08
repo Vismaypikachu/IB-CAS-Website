@@ -5,12 +5,11 @@
 
 	$bank = $_POST['banks'];
 	if(!empty($bank)){
-		$db_name = $bank;
 		
 		$host = "ibcasserver.mysql.database.azure.com";
 		$username = "ibcasvismay@ibcasserver";
 		$password = "jointechsavvyyouth1!";
-
+		$db_name = "foodBanks";
 
 		$conn = mysqli_init();
 		mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
@@ -21,13 +20,12 @@
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
 			
-			$result = $conn->query("SELECT id, name, quantity FROM inventory");
+			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
 			if($num_rows > 0){
 				$i = 1;
 				while($row = $result->fetch_assoc()){
-					#echo $_POST['quantity'.$i];
-					$result2 = $conn->query("UPDATE inventory SET quantity = " .$_POST["quantity".$i]. " WHERE name = '" .$row["name"]. "';");
+					$result2 = $conn->query("UPDATE $bank SET stock = " .$_POST["stock".$i]. " WHERE name = '" .$row["name"]. "';");
 					$i++;
 				}
 			}
@@ -40,8 +38,10 @@
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
-					<th>Quantity</th>
-					<th>Change Quantity</th>
+					<th>Stock</th>
+					<th>Wanted Stock</th>
+					<th>Change Stock</th>
+					<th>Change Wanted Stock</th>
 				</tr>";
 		$result = $conn->query("SELECT id, name, quantity FROM inventory");
 		$num_rows = $result->num_rows;
@@ -57,8 +57,10 @@
 				echo "<tr>
 					<td>". $row["id"] ."</td>
 					<td>". $row["name"] ."</td>
-					<td>". $row["quantity"] . "</td>
-					<td> <input type=\"text\" id=\"quantity" .$i. "\" name=\"quantity" .$i. "\" required> </td>
+					<td>". $row["stock"] . "</td>
+					<td>". $row["wantedStock"] . "</td>
+					<td> <input type=\"text\" id=\"stock" .$i. "\" name=\"stock" .$i. "\" required> </td>
+					<td> <input type=\"text\" id=\"wantedStock" .$i. "\" name=\"wantedStock" .$i. "\" required> </td>
 				</tr>";
 				
 				$i++;
