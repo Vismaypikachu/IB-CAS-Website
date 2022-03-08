@@ -43,7 +43,7 @@
 					<th>Change Stock</th>
 					<th>Change Wanted Stock</th>
 				</tr>";
-		$result = $conn->query("SELECT id, name, quantity FROM inventory");
+		$result = $conn->query("SELECT id, name, stock, wantedStock FROM inventory");
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
