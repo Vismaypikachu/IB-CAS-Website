@@ -19,7 +19,9 @@
 			
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
-			echo $bank;
+			if(isset($_POST['newItemCheck'])){
+				$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES ($_POST['newItemName'], 0, 0");
+			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
 			if($num_rows > 0){
@@ -66,20 +68,22 @@
 				
 				$i++;
 			}
-			echo "</table> 
-			<table name = \"table2\" id = \"table2\" style=\"width:20%\">
-				<th>New Item?</th>
-				<th>Item Name</th>
+			echo "
+				</table> 
+				<table name = \"table2\" id = \"table2\" style=\"width:20%\">
+					<th>New Item?</th>
+					<th>Item Name</th>
 
-				<tr>
-					<td> <input type=\"checkbox\" id=\"newItemCheck\" name=\"newItemCheck\"> </td>
-					<td> <input type=\"text\" id=\"newItemCheck\" name=\"newItemCheck\" placeholder=\"Ex. Orange\" > </td>
-				</tr>
-			</table>
+					<tr>
+						<td> <input type=\"checkbox\" id=\"newItemCheck\" name=\"newItemCheck\"> </td>
+						<td> <input type=\"text\" id=\"newItemName\" name=\"newItemName\" placeholder=\"Ex. Orange\" > </td>
+					</tr>
+				</table>
 
-			<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
-			<label for=\"requiredCheck\">I have reviewed my changes</label>
-			<input type=\"submit\" value=\"Submit\"></form><br>";
+				<input type=\"checkbox\" id=\"requiredCheck\" name=\"requiredCheck\" required> 
+				<label for=\"requiredCheck\">I have reviewed my changes</label>
+				<input type=\"submit\" value=\"Submit\"></form><br>
+			";
 				
 			if(isset($_POST['requiredCheck'])){ echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";}
 		}
