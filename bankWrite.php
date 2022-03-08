@@ -67,7 +67,7 @@
 				$i++;
 			}
 			echo "</table> 
-			<table id = \"table2\"  style=\"width:100%">
+			<table id = \"table2\"  style=\"width:100%\">
 				<th>Add a New Item</th>
 				<th>New Item Name</th>
 
@@ -81,7 +81,7 @@
 			<label for=\"requiredCheck\">I have reviewed my changes</label>
 			<input type=\"submit\" value=\"Submit\"></form><br>";
 				
-			if(isset($_POST['requiredCheck'])){ echo "<h3> Thank you for submitting! Your changes were successfully merged.</h3>";}
+			if(isset($_POST['requiredCheck'])){ echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";}
 		}
 		else{
 			echo "0 results availible at this time";
