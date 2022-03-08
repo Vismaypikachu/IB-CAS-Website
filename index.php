@@ -21,7 +21,7 @@
 		</div>
 		
 		<div id = "intro"> 
-			<p>Welcome to the INSERT NAME webpage. Here we do ...</p>
+			<p>CREATED by Vismay Patel, Shivani Sinha (Vulpix), and Manthan Jain (Lotad)... Welcome to the INSERT NAME webpage. Here we do ...</p>
 		</div>
 		
 		<div id = "our team"> 

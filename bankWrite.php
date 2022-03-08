@@ -20,6 +20,7 @@
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
 			if(isset($_POST['newItemCheck'])){
+				echo $_POST['newItemName'];
 				$newitemresult = $conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (\"" .$_POST['newItemName']. "\", 0, 0);");
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
@@ -50,7 +51,8 @@
 		$num_rows = $result->num_rows;
 		if($num_rows > 0){
 			$i = 1;
-			echo "<form action = \"bankWrite.php\" method = \"POST\">
+			echo "
+				<form action = \"bankWrite.php\" method = \"POST\">
 				<tr>
 					<td> <input type=\"text\" id=\"banks\" name = \"banks\" value=".$bank." style=\"display: none;\"> </td>
 				</tr>
