@@ -110,16 +110,17 @@
 				<input type=\"submit\" value=\"Submit\">
 				
 				</form>
+
+				<br><br>
 			";
-				
-			if(isset($_POST['requiredCheck'])){ 
+			
+			if(isset($_POST['requiredCheck'])){
 				if($duplicate == false){
 					echo "<h3>Thank you for submitting! Your changes were successfully merged.</h3>";
 				}
 				else{
 					echo "<h3>Duplicate name, please try again or contact a site admin. Stock changes were successfully merged.</h3>";
 				}
-				
 			}
 		}
 		else{
