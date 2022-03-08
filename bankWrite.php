@@ -68,7 +68,7 @@
 			}
 			echo "</table> 
 			<table name = \"table2\" id = \"table2\" style=\"width:20%\">
-				<th style=\"font-size:20px\">Add a New Item</th>
+				<th>New Item?</th>
 				<th>New Item Name</th>
 
 				<tr>
