@@ -20,7 +20,7 @@
 		//if checkmarked
 		if(isset($_POST['requiredCheck'])){
 			if(isset($_POST['newItemCheck'])){
-				$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES ($_POST['newItemName'], 0, 0");
+				$conn->query("INSERT INTO $bank (name, stock, wantedStock) VALUES (".$_POST['newItemName']."", 0, 0");
 			}
 			$result = $conn->query("SELECT id, name, stock, wantedStock FROM $bank");
 			$num_rows = $result->num_rows;
