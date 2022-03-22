@@ -12,8 +12,8 @@
 			<p>
 				<a href = "requestPage.php">Request Page</a>
 				<a href = "adminPage.php">Admin Page</a>      
-				<a href= "logout.php">Log Out</a>
-
+				<a href = "logout.php">Log Out</a>
+				<a href = "test.php">Test Page</a>
 			</p>
 		</div>
 	</header>
